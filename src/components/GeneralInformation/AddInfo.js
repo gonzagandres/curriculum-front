@@ -32,10 +32,15 @@ const AddInfo = () => {
         e.preventDefault();
         const info = { description, summary };
 
+        if(!description || !summary) {
+            alert("Please enter description and summary");
+            return;
+        }
+
         if (id) {
             GeneralInfoService.updateGeneralInfo(id, info)
                 .then(() => {
-                    navigate("/info");
+                    navigate("/");
                 })
                 .catch((error) => {
                     console.error('Error updating general information:', error);
@@ -43,7 +48,7 @@ const AddInfo = () => {
         } else {
             GeneralInfoService.addGeneralInfo(info)
                 .then(() => {
-                    navigate("/info");
+                    navigate("/");
                 })
                 .catch((error) => {
                     console.error('Error adding general information:', error);
@@ -78,13 +83,13 @@ const AddInfo = () => {
                                 onChange={(e) => setSummary(e.target.value)}
                             />
                         </div>
-                        <button
-                            type="submit"
-                            className="btn btn-success"
-                            onClick={saveOrUpdateInfo}
-                        >
-                            Save
-                        </button>
+                        <button className="btn btn-success" onClick={saveOrUpdateInfo}>
+                                Save
+                            </button>
+                            &nbsp;&nbsp;
+                            <button className="btn btn-danger" onClick={() => navigate("/")}>
+                                Cancel
+                            </button>
                     </form>
                 </div>
             </div>

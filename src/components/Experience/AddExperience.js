@@ -31,10 +31,15 @@ const AddExperience = () => {
         e.preventDefault();
         const experience = { job_title, company };
 
+        if (!job_title || !company) {
+            alert("Please enter job title and company");
+            return;
+        }
+
         if (id) {
             ExperienceService.updateExperience(id, experience)
                 .then(() => {
-                    navigate("/experiences");
+                    navigate("/");
                 })
                 .catch((error) => {
                     console.error('Error updating experience:', error);
@@ -42,7 +47,7 @@ const AddExperience = () => {
         } else {
             ExperienceService.addExperience(experience)
                 .then(() => {
-                    navigate("/experiences");
+                    navigate("/");
                 })
                 .catch((error) => {
                     console.error('Error adding experience:', error);
@@ -81,7 +86,7 @@ const AddExperience = () => {
                                 Save
                             </button>
                             &nbsp;&nbsp;
-                            <button className="btn btn-danger" onClick={() => navigate("/experiences")}>
+                            <button className="btn btn-danger" onClick={() => navigate("/")}>
                                 Cancel
                             </button>
                         </form>

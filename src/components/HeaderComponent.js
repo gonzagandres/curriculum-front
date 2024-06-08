@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export const HeaderComponent = () => {
     return (
         <div>
@@ -7,13 +8,15 @@ export const HeaderComponent = () => {
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <div>
                         <a href="/" className="navbar-brand">
-                            Curriculum
+                            Curriculum Vitae
                         </a>
                     </div>
                 </nav>
+                
             </header>
         </div>
     );
 };
 
 export default HeaderComponent;
+

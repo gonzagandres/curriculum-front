@@ -32,7 +32,6 @@ const ListSkill = () => {
 
   return (
     <div className='container'>
-        <h2 className='text-center'>List of Skills</h2>
         <Link to='/add-skill' className='btn btn-primary mb-2'>
             Add Skill
         </Link>

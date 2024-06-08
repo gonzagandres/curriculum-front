@@ -33,7 +33,6 @@ const ListExperience = () => {
 
     return (
         <div className="container">
-            <h2 className="text-center">List of Experiences</h2>
             <Link to="/add-experience" className="btn btn-primary mb-2">
                 Add Experience
             </Link>

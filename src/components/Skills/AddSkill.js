@@ -33,10 +33,15 @@ const AddSkill = () => {
         e.preventDefault();
         const skill = { skill_name, proficiency_level };
 
+        if(!skill_name || !proficiency_level) {
+            alert("Please enter skill name and proficiency level");
+            return;
+        }
+
         if (id) {
             SkillService.updateSkill(id, skill)
                 .then(() => {
-                    navigate("/skills");
+                    navigate("/");
                 })
                 .catch((error) => {
                     console.error('Error updating skill:', error);
@@ -44,7 +49,7 @@ const AddSkill = () => {
         } else {
             SkillService.addSkill(skill)
                 .then(() => {
-                    navigate("/skills");
+                    navigate("/");
                 })
                 .catch((error) => {
                     console.error('Error adding skill:', error);
@@ -79,9 +84,13 @@ const AddSkill = () => {
                                 onChange={(e) => setLevel(e.target.value)}
                             />
                         </div>
-                        <button onClick={saveOrUpdateSkill} className='btn btn-success'>
-                            {id ? "Update" : "Save"}
-                        </button>
+                        <button className="btn btn-success" onClick={saveOrUpdateSkill}>
+                                Save
+                            </button>
+                            &nbsp;&nbsp;
+                            <button className="btn btn-danger" onClick={() => navigate("/")}>
+                                Cancel
+                            </button>
                     </form>
                 </div>
             </div>

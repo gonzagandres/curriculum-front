@@ -32,7 +32,6 @@ const ListInfo = () => {
 
     return (
         <div className="container">
-            <h2 className="text-center">List of General Information</h2>
             <Link to="/add-info" className="btn btn-primary mb-2">
                 Add General Information
             </Link>

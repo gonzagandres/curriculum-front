@@ -1,9 +1,36 @@
-.footer{
-  position: fixed;
+.footer {
+  position: flex;
   bottom: 0;
+  left: 0;
   width: 100%;
-  height: 50px;
-  background-color: black;
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.582);
   text-align: center;
-  color: white;
+  padding: 10px 0;
+}
+
+.navbar-nav .nav-link{
+  font-weight: 500;
+  color: black;
+}
+
+.container {
+  padding: 20px;
+}
+
+.lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-section h2 {
+  margin-top: 0;
 }
