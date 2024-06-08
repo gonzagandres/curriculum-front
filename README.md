@@ -15,10 +15,6 @@ Ensure you have the following software installed on your machine:
 
 1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/your-username/curriculum-cv.git
-   cd curriculum-cv
-
 2. **Install dependencies (node_modules folder)**
 
     Execute the following command in the project folder to install the necessary dependencies:
