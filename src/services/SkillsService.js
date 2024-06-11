@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/api/skills';
+const BASE_URL = 'https://curriculum-backend-0gyj.onrender.com/api/skills';
 
 const SkillsService = {
   getAllSkills: async () => {

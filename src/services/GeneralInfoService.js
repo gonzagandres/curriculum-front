@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/api/general-information';
+const BASE_URL = 'https://curriculum-backend-0gyj.onrender.com/api/general-information';
 
 const GeneralInfoService = {
   getGeneralInfo: async () => {

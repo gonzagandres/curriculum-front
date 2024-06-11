@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/api/experience';
+const BASE_URL = 'https://curriculum-backend-0gyj.onrender.com/api/experience';
 
 const ExperienceService = {
   getAllExperiences: async () => {
