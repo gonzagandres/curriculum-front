@@ -13,6 +13,7 @@ const AddExperience = () => {
         if (id) {
             fetchExperience();
         }
+    // eslint-disable-next-line no-use-before-define, react-hooks/exhaustive-deps
     }, [id]);
 
     const fetchExperience = () => {
