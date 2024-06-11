@@ -15,7 +15,6 @@ const AddSkill = () => {
         if (id) {
             fetchSkill();
         }
-        // eslint-disable-next-line no-use-before-define, react-hooks/exhaustive-deps
     }, [id]);
 
     const fetchSkill = () => {
